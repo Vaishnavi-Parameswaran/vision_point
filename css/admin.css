@@ -1,0 +1,125 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Light grey background */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+h2 {
+    background-color: #2c3e50; /* Dark blue/grey header */
+    color: #ffffff;
+    padding: 25px 30px;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Main Content Wrapper */
+.admin-dashboard-container {
+    flex-grow: 1; /* Allows it to take up remaining vertical space */
+    max-width: 900px;
+    margin: 30px auto; /* Centers the content and adds vertical margin */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.welcome-message {
+    font-size: 24px;
+    color: #34495e; /* Slightly lighter dark blue */
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.dashboard-intro-text {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Navigation List Styling */
+.admin-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid; /* Use grid for responsive layout of links */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px;
+}
+
+.admin-nav-list li {
+    background-color: #ecf0f1; /* Light background for list items */
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-nav-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.admin-nav-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text and icon */
+    padding: 20px;
+    text-decoration: none;
+    color: #3498db; /* Blue color for links */
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Ensure text is centered if it wraps */
+}
+
+.admin-nav-list li a:hover {
+    background-color: #dbeaff; /* Lighter blue on hover */
+}
+
+/* Icon for Logout link (optional, if you want different styling) */
+.admin-nav-list li:last-child a { /* Targets the last li, assuming it's Logout */
+    color: #e74c3c; /* Red for logout */
+}
+
+.admin-nav-list li:last-child a:hover {
+    background-color: #fce4e4; /* Lighter red on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .admin-dashboard-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .welcome-message {
+        font-size: 20px;
+    }
+
+    .admin-nav-list {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .admin-nav-list li a {
+        font-size: 16px;
+        padding: 15px;
+    }
+}

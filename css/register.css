@@ -1,0 +1,151 @@
+/* ----------------------------
+   General Styles
+---------------------------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+.signup-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #222831, #948979);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.signup-container {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  
+}
+
+.signup-container h2 {
+  text-align: center;
+  color: #948979;
+  margin-bottom: 25px;
+}
+
+.signup-container input {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 10px;
+  transition: border 0.3s;
+}
+
+.signup-container input:focus {
+  border-color: #948979;
+  outline: none;
+}
+
+.signup-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #393E46;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.signup-container button:hover {
+  background-color: #948979;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #948979;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------
+   Inline Error Styles for Validation
+---------------------------- */
+.error-message {
+  display: block;
+  color: red;
+  font-size: 13px;
+  margin: -10px 0 10px 5px;
+}
+
+/* ----------------------------
+   Dark Mode Styles
+---------------------------- */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .signup-body {
+  background: #121212;
+}
+
+body.dark-mode .signup-container {
+  background-color: #1e1e1e;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input,
+body.dark-mode button {
+  background-color: #333;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+body.dark-mode input:focus {
+  border-color: #948979;
+}
+
+body.dark-mode .login-link a {
+  color: #948979;
+}
+
+/* ----------------------------
+   Dark Mode Toggle Switch
+---------------------------- */
+.dark-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 14px;
+  color: #393E46;
+  cursor: pointer;
+}
+
+body.dark-mode .dark-toggle {
+  color: #f1f1f1;
+}
+
+/* ----------------------------
+   Responsive
+---------------------------- */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 30px 20px;
+    width: 100%;
+  }
+}
